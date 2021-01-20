@@ -1,0 +1,80 @@
+main div.ranking {
+    width: 800px;
+    margin: 0 auto;
+}
+
+main .ranking .title {
+    font-style: italic;
+    font-size: 96px;
+    line-height: 175.78%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+main .ranking .header {
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFAFA;
+    opacity: 0.3;
+    width: 100%; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .ranking .evidence .singleStudent {
+    font-size: 16px;
+    width: 100%; 
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    background: #F5F5F7;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+main .ranking .evidence .singleStudent .avatar img {
+    width: 32px;
+    height: 32px;
+}
+
+main .ranking .evidence .singleStudent .score img{
+    width: 32px;
+    height: 32px;
+    transform: translate(-10px, 10px);
+}
+
+main .ranking .evidence .singleStudent a {
+    border: 2px solid black;
+    padding: 16px;
+    background: #F5F5F7;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    color: #0C0B0B;
+    font-weight: bold;
+}
+
+main .ranking .buttonBack {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+main .ranking .buttonBack button {
+    width: 300px;
+    height: 56px;
+    bottom: 15px;
+    right: 25px;
+    background: linear-gradient(253.58deg, #009EE3 1.55%, rgba(0, 255, 224, 0.68) 95.8%);
+    border-radius: 100px;
+    cursor:pointer;
+}

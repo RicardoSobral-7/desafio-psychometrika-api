@@ -1,0 +1,14 @@
+main .logout {
+    position: absolute;
+    right: 15px;
+}
+
+main .logout p {
+    color:#ddd;
+    transition: color 300ms;
+}
+
+main .logout p:hover {
+    color: white;
+    cursor: pointer;
+}

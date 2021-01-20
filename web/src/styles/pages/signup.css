@@ -1,0 +1,37 @@
+main .login {
+    width: 400px;
+    margin: 300px auto;
+}
+main .login form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+ main .login form h2 {
+    margin-bottom: 32px;
+    color: #fff;
+    font-size: 48px;
+    line-height: 57px;
+}
+
+main .login form input{
+    text-align: start;
+    width: 430px;
+    height: 60px;
+    margin-bottom:26px;
+    font-size: 24px;
+    background: #FFFFFF;
+    border: 1px solid #EFEFEF;
+    border-radius: 100px;
+    padding: 0 16px;
+}
+
+main .login form button {
+    background: linear-gradient(253.58deg, #009EE3 1.55%, rgba(0, 255, 224, 0.68) 95.8%);
+    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+    border-radius: 100px;
+    width: 430px;
+    height: 60px;
+    border: none;
+}

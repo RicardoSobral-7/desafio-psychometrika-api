@@ -1,0 +1,26 @@
+.buttons button {
+    color: white;
+    border: none;
+}
+
+.buttons button:nth-child(1){
+    position: absolute;
+    width: 160px;
+    height: 56px;
+    bottom: 15px;
+    right:225px;
+    background: linear-gradient(253.58deg, #0569FF 16.02%, #B51AA5 95.8%);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.buttons button:nth-child(2) {
+    position: absolute;
+    width: 160px;
+    height: 56px;
+    bottom: 15px;
+    right: 25px;
+    background: linear-gradient(253.58deg, #2AD76F 1.55%, #20A2CB 93.34%);
+    border-radius: 100px;
+    cursor:pointer;
+}

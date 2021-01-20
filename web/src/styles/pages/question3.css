@@ -1,0 +1,106 @@
+main .pergunta3{
+    min-height:880px ;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    background-image: linear-gradient(to bottom, #f1ebd9, #fff);
+    border-radius: 0 0 16px 16px ;
+    position: relative;
+    text-align: justify;
+}
+
+main .pergunta3 .enunciado {
+    line-height:34px;
+    align-items: center;  
+}
+
+main .pergunta3 .figura {
+    bottom: 300px;
+    right:-50px;
+}
+
+main .pergunta3 .figura .tabela {
+    position: relative;
+}
+
+main .pergunta3 .figura .tabela p {
+    text-align:  center;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+main .pergunta3 .figura .tabela .locus{
+    height: 220px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    left: 130px;
+    bottom: 15px;
+}
+
+main .pergunta3 .figura .tabela .title {
+    font-size: 16px;
+    margin: 15px auto 0;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(15px);
+    color: black;
+}
+
+main .pergunta3 .figura .tabela .title span:last-child {
+    transform: translateX(-45px);
+}
+
+main .pergunta3 .figura .tabela table{
+    width: 600px;
+    font-size: 16px;
+    text-align: center;
+    margin: 15px auto 0;
+}
+
+main .pergunta3 .figura .tabela table tbody tr td {
+    width: 50px;
+    height: 5px;
+}
+
+main .pergunta3 .figura .tabela table tbody tr td img{
+    width: 25px;
+
+}
+
+main .pergunta3 .form {
+    text-align: center;
+}
+
+main .pergunta3 .form p {
+    margin-bottom: 38px;
+}
+
+main .pergunta3 .form form .options {
+    width: 450px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+main .pergunta3 .form p {
+    margin-top: 32px;
+}
+
+
+main .pergunta3 .form form .options div label input[type=radio] {
+    height: 17px;
+    width: 16px;
+    margin-left: 5px;
+}
+
+main .pergunta3 .form form .options div span {
+    margin-left: 5px;
+}

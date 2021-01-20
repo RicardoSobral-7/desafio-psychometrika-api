@@ -1,0 +1,67 @@
+
+main .title {
+    color: white;
+    font-size: 96px;
+    font-style: italic;
+    margin: 0 auto 42px auto;
+    text-align: center;
+}
+
+main .evidence {
+    width: 800px;
+    margin: 0 auto;
+}
+
+main .evidence .title {
+    font-size: 48px;
+    text-align: center;
+}
+
+main .evidence .title .info {
+    color: #ddd;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+main .evidence .headerQuestion{
+    height: 42px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    color: #5C5C5C;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 12px;
+
+}
+
+main .evidence .showEvidence {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid #efefef;
+    border-radius: 0 0 10px 10px;
+    color:black;
+    text-transform: uppercase;
+    background-color: #fff;
+}
+
+main .evidence .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+
+main .evidence .buttons button {
+    position: initial;
+    margin-top: 20px;
+    width: 200px;
+    height: 71px;
+    background: linear-gradient(253.58deg, #009EE3 1.55%, rgba(0, 255, 224, 0.68) 95.8%);
+    box-shadow: 0px 12px 35px rgba(160, 121, 0, 0.2);
+    border-radius: 100px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}

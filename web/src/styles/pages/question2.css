@@ -1,0 +1,149 @@
+main .pergunta2{
+    min-height:840px ;
+    display: grid;
+    grid-column: 1fr 1fr;
+    grid-template-areas: "enunciado form"
+                         "figura options";
+    padding: 48px;
+    background-image: linear-gradient(to bottom, #f1ebd9, #fff);
+    border-radius: 0 0 16px 16px ;
+    gap: 36px;
+    position: relative;
+}
+
+main .pergunta2 .enunciado {
+    line-height:34px;
+    grid-area: enunciado;  
+    align-items: center;  
+}
+
+main .pergunta2 .figura {
+    position:absolute;
+    bottom: 300px;
+    right:-50px;
+    grid-area: figura;
+}
+
+main .pergunta2 .figura .tabela {
+    width: 500px;
+}
+
+main .pergunta2 .figura .tabela{
+    width: 450px;
+    font-size: 16px;
+    text-align: center;
+}
+
+main .pergunta2 .figura .tabela table {
+    border-collapse: collapse;
+
+    border: 1px solid black;
+}
+
+
+main .pergunta2 .figura .tabela table thead {
+    background-color: rgb(202, 202, 202);
+    
+}
+
+main .pergunta2 .figura .tabela table thead tr th {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+main .pergunta2 .figura .tabela table tbody tr td {
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+main .pergunta2 .figura .tabela table tbody tr {
+    border-right: 1px solid  black;
+}
+
+
+main .pergunta2 .form {
+    grid-area: form;
+    
+}
+
+main .pergunta2 .form form .options{
+    grid-area: options;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px;
+    margin-top: 32px;
+    gap: 10px;
+    font-size: 16px;
+    
+}
+
+main .pergunta2 .form form .options div {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+main .pergunta2 .form form .options div label {
+    justify-self: center;
+    align-self: center;
+}
+
+main .pergunta2 .form form .options div label input[type=radio] {
+    transform: translateY(3px);
+}
+
+main .pergunta2 .form form .options input[type=radio]{
+    margin: 4px;
+    width: 16px;
+    height: 17px;
+}
+
+main .pergunta2 .form form .options .matriz {
+    display: flex;
+    flex-direction: row;
+}
+
+main .pergunta2 .form form .options .matriz span:first-child,
+main .pergunta2 .form form .options .matriz span:last-child {
+    font-size: 110px;
+    font-weight: 100;
+}
+
+main .pergunta2 .form form .options .matriz div {
+    align-self: center;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 20px 20px 20px;
+}
+
+main .pergunta2 .form form .options .matriz div p{
+    line-height: 1px;
+    align-self: center;
+    margin: 0 5px;
+}
+
+main .pergunta2 .form form .options .matriz div.one {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    line-height: 0;
+}
+
+main .pergunta2 .form form .options .matriz div.d {
+    display: flex;
+    flex-direction: column;
+
+}
+
+main .pergunta2 .form form .options .matriz div div.fracao {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20px 20px 20px;
+    margin-top: 8px ;
+}
+
+main .pergunta2 .form form .options .matriz span.r {
+    font-weight: 100;
+    font-size: 280px;
+}
+

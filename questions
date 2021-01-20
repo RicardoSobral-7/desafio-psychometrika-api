@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "60063ecdd6c63225447b42e2"
+  },
+  "alternatives": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "theme": "Matemática e suas tecnologias",
+  "enunciation": "A Transferência Eletrônica Disponível (TED) é uma transação financeira de valores entre diferentes bancos. Um economista decide analisar os valores enviados por meio de TEDs entre cinco bancos (1,2, 3, 4 e 5) durante um mês. Para isso, ele dispõe esses valores em uma matriz A = [aij], em que 1 ≤ i ≤ 5 e 1 ≤ j ≤ 5, e o elemento aij corresponde ao total proveniente das operações feitas via TED, em milhão de real, transferidos do banco i para o banco j durante o mês. Observe que os elementos aij = 0, uma vez que TED é uma transferência entre bancos distintos. Esta é a matriz obtida para essa análise:",
+  "correctAnswer": "b",
+  "createdAt": {
+    "$date": "2021-01-19T02:07:09.495Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60064e54d248203567da5cab"
+  },
+  "alternatives": [
+    "a",
+    "b",
+    "c",
+    "d",
+    "e"
+  ],
+  "theme": "Matemática e suas tecnologias",
+  "enunciation": "Um aluno registrou as notas bimestrais de algumas de suas disciplinas numa tabela. Ele observou que as entradas numéricas da tabela formavam uma matriz 4x4, e que poderia calcular as médias anuais dessas disciplinas usando produto de matrizes. Todas as provas possuíam o mesmo peso, e a tabela que ele conseguiu é mostrada a seguir.",
+  "correctAnswer": "c",
+  "createdAt": {
+    "$date": "2021-01-19T03:13:24.043Z"
+  },
+  "__v": 0
+}]

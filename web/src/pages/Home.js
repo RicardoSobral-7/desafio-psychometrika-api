@@ -7,21 +7,21 @@ function Home() {
     return (
         <main>
             <div className="home">
-                <div class="container">
-                    <div class="card">
-                        <div class="circle">
+                <div className="container">
+                    <div className="card">
+                        <div className="circle">
                             <h2>Signup</h2>
                         </div>
-                        <div class="content">
+                        <div className="content">
                             <p>Signup para acessar o simulado</p>
                             <Link to="/signup">Acessar</Link>
                         </div>
                     </div>
-                    <div class="card">
-                        <div class="circle">
+                    <div className="card">
+                        <div className="circle">
                             <h2>Ranking</h2>
                         </div>
-                        <div class="content">
+                        <div className="content">
                             <p>Ranking</p>
                             <Link to="/ranking">Acessar</Link>
                         </div>

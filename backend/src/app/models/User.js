@@ -12,5 +12,9 @@ module.exports = {
         } catch (error) {
             return {Error : `Internal error ${error}`}
         }
+    },
+    async findUser(name, email) {
+        const user = await User.findOne({ name, email});
+        return user;
     }
 }

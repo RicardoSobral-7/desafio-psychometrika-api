@@ -37,16 +37,26 @@ module.exports = {
         const id = req.userId;
         const questions = await consult.gabarito(id);
 
-        res.status(200).json({ user: id, questions });
+        res.status(200).json(questions);
     },
     async ranking(req, res) {
         const ranking = await consult.ranking();
-        res.status(200).json({ranking});
+        res.status(200).json(ranking);
     },
     async show(req, res) {
-        const {id} = req.params;
-        const information = await consult.individualEvidence(id);
-        res.status(200).json({information});
+        try {
+            const id = req.params.id;
+            if(id){
+                const information = await consult.individualEvidence(id);
+                res.status(200).json(information);
+            }else {
+                res.status(400).json({error: "Need id at URL: /api/evidence/12327s8a"})
+            }
+            
+        } catch (error) {
+            res.status(500).json({error: "Internal server error!"});
+        }
+
     }
 
 

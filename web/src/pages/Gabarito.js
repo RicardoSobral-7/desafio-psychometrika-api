@@ -11,7 +11,7 @@ export default function Gabarito() {
     const [data, setData] = useState({})
 
     useEffect(() => {
-        api.get("api/prova/gabarito").then((response) => setData(response.data.questions));
+        api.get("prova/gabarito").then((response) => setData(response.data.questions));
     }, [])
 
     function modal() {

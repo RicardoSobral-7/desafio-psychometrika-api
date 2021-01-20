@@ -25,7 +25,7 @@ export default function Signup() {
                 name: name,
                 email: email
             }
-            await api.post("api/signin", data)
+            await api.post("signin", data)
                 .then(response => localStorage.setItem("TOKEN_KEY", response.data.token));
             history.push("/prova/questao1");
         } catch (error) {

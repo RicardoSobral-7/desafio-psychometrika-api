@@ -12,7 +12,7 @@ export default function Ranking() {
     const [data, setData] = useState([])
 
     useEffect(() => {
-        api.get("api/ranking").then(response => setData(response.data));
+        api.get("ranking").then(response => setData(response.data));
     }, []);
 
     return (

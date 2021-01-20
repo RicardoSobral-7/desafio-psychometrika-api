@@ -6,11 +6,21 @@ import "../styles/pages/evidence.css"
 export default function Evidence() {
     const params = useParams();
     const history = useHistory();
-    const [data, setData] = useState({});    
+    const [data, setData] = useState({});
+    const [answers, setAnswers] = useState([]);    
     
     useEffect(() => {
-        api.get(`api/evidence/`).then(response => setData(response.data));
-    }, []);
+        api.get(`evidence/${params.id}`).then(response =>{ 
+            setData(response.data);
+            setAnswers(response.data.questions_answers);
+
+            });
+    }, [params.id]);
+
+
+    if(!data) {
+        return <p>Loading...</p>
+    }
 
     return (
         <main>
@@ -28,15 +38,14 @@ export default function Evidence() {
                     <div>Resposta</div>
                 </div>
                 <div className="showEvidence">
-                    {data.questions_answers.map((answer, index) => {
-                        return (
-                            <>
-                                <div>Questão {index+1}</div>
-                                <div>{answer}</div>
-                            </>
-                        )
-                    })}
-
+                {answers.map((answer, index)=> {
+                    return (
+                        <div className="answer" key={`${index}-${answer}`}> 
+                            <div>Questão {index+1}</div>
+                            <div>{answer}</div>
+                        </div>
+                    )
+                })}
                 </div>
 
                 <div className="buttons">

@@ -1,8 +1,10 @@
 const Question = require("../models/Question");
+const katex = require('katex');
 
 module.exports = {
     async create(req, res) {
         try {
+            console.log(req.body)
             await Question.create(req.body);
             res.status(201).json();
 

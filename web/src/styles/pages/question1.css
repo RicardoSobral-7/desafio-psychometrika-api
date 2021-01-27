@@ -22,29 +22,8 @@ main .pergunta1 .figura {
 }
 
 main .pergunta1 .figura .matriz {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
-
-main .pergunta1 .figura .matriz span:nth-child(2) {
-    font-weight: 100;
-    font-size: 160px;
-    margin-right: 15px;
-}
-
-main .pergunta1 .figura .matriz span:last-child {
-    
-    font-weight: 100;
-    font-size: 160px;
-}
-
-main .pergunta1 .figura .matriz p {
-    letter-spacing: 15px;
-    flex-direction: column;
-}
-
-
 
 main .pergunta1 .form {
     grid-area: form;

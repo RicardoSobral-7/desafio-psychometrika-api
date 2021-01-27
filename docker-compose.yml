@@ -1,0 +1,41 @@
+version: '3'
+services: 
+  api:
+    build:
+      dockerfile: ./backend/node.dockerfile
+      context: .
+    image: sumulado/api
+    container_name: simulado-api
+    ports:
+      - "5550:5550"
+    volumes: 
+      - ./backend:/simulado/api
+    networks: 
+      - developer-network
+    depends_on: 
+     - "mongodb"
+
+  app:
+    build:
+      dockerfile: ./web/react.dockerfile
+      context: .
+    image: sumulado/app
+    container_name: simulado-app
+    ports:
+      - "3000:3000"
+    volumes: 
+      - ./web:/simulado/app
+    networks: 
+      - developer-network
+    depends_on: 
+     - "api"
+     
+  mongodb:
+    container_name: simulado-mongodb
+    image: mongo
+    networks: 
+      - developer-network
+
+networks: 
+  developer-network:
+    driver: bridge

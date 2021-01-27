@@ -1,12 +1,11 @@
 const Questions = require("../../database/schema/Question");
 const User = require("../../database/schema/User");
-
-
+ 
 module.exports = {
     async create(data) {
         try {
-            const { theme, enunciation, alternatives, correctAnswer } = data
-            await Questions.create({ theme, enunciation, alternatives, correctAnswer });
+            const { theme, enunciation, matrix, tables, pre_alternatives, alternative_letter, alternative_body, correctAnswer } = data
+            await Questions.create({ theme, enunciation, matrix, tables, pre_alternatives, alternative_letter, alternative_body, correctAnswer });
         } catch (error) {
             return { Error: `Internal error ${error}` }
         }

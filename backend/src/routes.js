@@ -6,8 +6,9 @@ const authMiddleware = require("./app/middlewares/auth");
 const questionController = require('./app/controllers/question');
 
 routes.post("/api/signin", userController.checkUser);
- 
+
 routes.get('/api/question/all', questionController.findAllQuestions);
+routes.post('/api/question/create', questionController.create);
 
 routes.use("/api/question/:id", authMiddleware.auth);
 routes.get('/api/question/:id', questionController.findOneQuestion);
@@ -15,7 +16,6 @@ routes.get('/api/question/:id', questionController.findOneQuestion);
 routes.use("/api/question/answers", authMiddleware.auth);
 routes.post('/api/question/answers', questionController.registerAnswers);
 
-routes.post('/api/question/create', questionController.create);
 
 // routes.use("/api/prova/questao1", authMiddleware.auth);
 // routes.post("/api/prova/questao1", simulationController.question1);

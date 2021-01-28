@@ -27,7 +27,7 @@ export default function Signup() {
             }
             await api.post("signin", data)
                 .then(response => localStorage.setItem("TOKEN_KEY", response.data.token));
-            history.push("/prova/questao1");
+            history.push("/prova/questoes");
         } catch (error) {
             return alert("Verificar se o email está correto.")
         }

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/simulation", {
+mongoose.connect("mongodb://simulado-mongodb:27017/simulation", {
     useNewUrlParser: true,
     useUnifiedTopology: true,  
     useFindAndModify: false 

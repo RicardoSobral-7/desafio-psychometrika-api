@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Navbar from "../components/Navbar";
-import QuestionsButtons from "../components/QuestionsButtons";
 import Logout from "../components/Logout";
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
@@ -29,9 +27,6 @@ export default function Question2() {
 
     return (
         <main>
-            <Navbar questionNumber={2} questionType={"Matemática e suas tecnologias"} />
-
-
             <div className="pergunta2">
                 <div className="enunciado">
                     <p>
@@ -213,7 +208,6 @@ export default function Question2() {
                                 </div>
                             </div>
                         </div>
-                        <QuestionsButtons />
                     </form>
                 </div>
             </div>

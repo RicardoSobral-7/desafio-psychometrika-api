@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/components/buttonsQuestions.css"
+import "../../styles/components/buttonsQuestions.css"
 
 function Button() {
     return (

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import Navbar from "../components/Navbar";
-import QuestionsButtons from "../components/QuestionsButtons";
+import Navbar from "../components/QuestionsComponents/Navbar";
+import QuestionsButtons from "../components/QuestionsComponents/QuestionsButtons";
 import Logout from "../components/Logout";
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
-import "../styles/pages/question1.css";
+import "../styles/pages/questions.css";
 import { InlineMath, BlockMath } from 'react-katex';
 import 'katex/dist/katex.min.css';
 
@@ -14,18 +14,21 @@ export default function Question1() {
     let [answer, setAnswer] = useState("");
     let [answers, setAnswers] = useState([]);
     let [questionsIndex, setQuestionsIndex] = useState(0);
+    let [questionNumber, setQuestionNumber] = useState(1);
     const [questions, setQuestions] = useState([])
     const [data, setData] = useState({});
     const history = useHistory();
 
-    console.log(questions.length, answers.length)
+
+    console.log(answers.length, questions[questionsIndex])
 
     async function handleSubmit(event) {
         event.preventDefault();
         try {
             await setAnswers(...answers, answer);
             await alert('Resposta registrada');
-            await setQuestionsIndex(questionsIndex++);
+            await setQuestionsIndex(++questionsIndex)
+            await setQuestionNumber(++questionNumber)
             if (answers.length === questions.length) {
                 history.push("/prova/gabarito")
             }
@@ -48,8 +51,8 @@ export default function Question1() {
 
     return (
         <main>
-            <Navbar questionNumber={1} questionType={data.theme} />
-            <div className="pergunta1">
+            <Navbar questionNumber={questionNumber} questionType={data.theme} />
+            <div className="question">
                 <div className="enunciado">
                     <p>{data.enunciation}</p>
                 </div>
@@ -67,8 +70,8 @@ export default function Question1() {
                     {data.tables == undefined ? <></> :
                         data.tables.map((tables, index) => {
                             return (
-                                <div className="matriz" key={`tables-${index}`}>
-                                    <BlockMath math={tables == undefined ? "" : tables}
+                                <div className="tables" key={`tables-${index}`}>
+                                    <BlockMath math={tables !== undefined ? tables : null }
                                     />
                                 </div>
                             )

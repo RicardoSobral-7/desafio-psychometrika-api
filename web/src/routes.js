@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import Home from "./pages/Home"
 import Signup from "./pages/Signup";
-import Questao1 from "./pages/Questao1";
+import Questoes from "./pages/Questoes";
 import Questao2 from "./pages/Questao2";
 import Questao3 from "./pages/Questao3";
 import Questao4 from "./pages/Questao4";
@@ -35,7 +35,7 @@ const Routes = () => (
         <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/signup" component={Signup} />
-            <PrivateRoute path="/prova/questao1" component={Questao1}/>
+            <PrivateRoute path="/prova/questoes" component={Questoes}/>
             <PrivateRoute path="/prova/questao2" component={Questao2}/>
             <PrivateRoute path="/prova/questao3" component={Questao3}/>
             <PrivateRoute path="/prova/questao4" component={Questao4}/>

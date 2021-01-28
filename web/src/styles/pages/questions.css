@@ -1,4 +1,4 @@
-main .pergunta1{
+main .question{
     min-height:840px ;
     display: grid;
     grid-column: 1fr 1fr;
@@ -11,26 +11,26 @@ main .pergunta1{
     position: relative;
 }
 
-main .pergunta1 .enunciado {
+main .question .enunciado {
     line-height:34px;
     grid-area: enunciado;  
     align-items: center;  
 }
 
-main .pergunta1 .figura {
+main .question .figura {
     grid-area: figura;
 }
 
-main .pergunta1 .figura .matriz {
+main .question .figura .matriz {
     text-align: center;
 }
 
-main .pergunta1 .form {
+main .question .form {
     grid-area: form;
     
 }
 
-main .pergunta1 .form form .options{
+main .question .form form .options{
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 32px;
@@ -41,7 +41,7 @@ main .form form .options div span {
     transform: translateY(5px);
 }
 
-main .pergunta1 .form form .options input[type=radio]{
+main .question .form form .options input[type=radio]{
     margin: 4px;
     width: 16px;
     height: 17px;

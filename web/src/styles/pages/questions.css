@@ -41,6 +41,10 @@ main .form form .options div span {
     transform: translateY(5px);
 }
 
+main .question .form form .options label {
+    text-transform: uppercase;
+}
+
 main .question .form form .options input[type=radio]{
     margin: 4px;
     width: 16px;

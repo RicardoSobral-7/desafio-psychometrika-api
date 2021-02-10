@@ -1,5 +1,6 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import Signup from './pages/Signup';
+import Questoes from './pages/Questoes';
 
 describe('Login screen', () => {
     it('should denied email', async () => {
@@ -16,5 +17,11 @@ describe('Login screen', () => {
             expect(screen.getByRole('alert')).toHaveTextContent('Email invalido');
         });
 
+    });
+});
+
+describe('Questions page', () => {
+    it('should appear questions number', () => {
+        
     });
 });

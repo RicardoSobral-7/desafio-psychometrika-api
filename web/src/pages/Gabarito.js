@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from "../services/api";
 import { useHistory } from "react-router-dom";
+import AsyncStorage from 'AsyncStorage';
 import "../styles/pages/gabarito.css";
 import "../styles/components/modal.css";
 import cicle from "../styles/icons/circle.svg";

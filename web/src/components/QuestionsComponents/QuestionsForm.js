@@ -38,7 +38,7 @@ function QuestionsForm({ data, functionController, haveMoreQuestion }) {
                     <p>{data.pre_alternatives}</p>
                     <form onSubmit={handleSubmit}>
                         <div className="options">
-                            {data.alternative_letter == undefined ? <p>Loading</p> : data.alternative_letter.map((letter, index) => {
+                            {data.alternative_letter === undefined ? <p>Loading</p> : data.alternative_letter.map((letter, index) => {
                                 return (
                                     <div key={`${letter}-${index}`}>
                                         <label htmlFor={`alternatives-${letter}`}>{letter}</label>

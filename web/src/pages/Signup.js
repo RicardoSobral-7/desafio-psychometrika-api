@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
+import { AsyncStorage } from 'AsyncStorage';
 import api from "../services/api";
 import "../styles/pages/signup.css";
 
@@ -7,6 +8,11 @@ export default function Signup() {
     const history = useHistory();
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    useEffect(() => {
+        api.get('question/all').then(response => AsyncStorage.setItem('QUESTIONS', [response.data]));
+    }, []);
+    const questions = AsyncStorage.getItem('QUESTIONS');
+    console.log()
 
     function verifyEmail(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -27,7 +33,11 @@ export default function Signup() {
             }
             await api.post("signin", data)
                 .then(response => localStorage.setItem("TOKEN_KEY", response.data.token));
-            history.push("/prova/questoes");
+
+            const questions = AsyncStorage.getItem('QUESTIONS');
+            
+            history.push(`/prova/questao/${questions[0].fulfilled}`);
+
         } catch (error) {
             return alert("Verificar se o email está correto.")
         }

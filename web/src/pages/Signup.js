@@ -6,13 +6,16 @@ import "../styles/pages/signup.css";
 
 export default function Signup() {
     const history = useHistory();
+    const [questionsId, setQuestionsId] = useState([]);
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+
     useEffect(() => {
-        api.get('question/all').then(response => AsyncStorage.setItem('QUESTIONS', [response.data]));
+        api.get('question/all').then(response => setQuestionsId(response.data));
     }, []);
-    const questions = AsyncStorage.getItem('QUESTIONS');
-    console.log()
+    AsyncStorage.setItem('QUESTIONS_ID', [questionsId]);
+    console.log(AsyncStorage.getItem('QUESTIONS_ID'));
+
 
     function verifyEmail(email) {
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
